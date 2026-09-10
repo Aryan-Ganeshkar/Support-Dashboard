@@ -24,7 +24,7 @@ export default function Header({ title, description, onMenuClick }) {
             alt="Agent avatar"
             className="h-7 w-7 rounded-full bg-canvas-deep"
           />
-          <span className="hidden text-sm font-medium text-ink sm:block">Priya N.</span>
+          <span className="hidden text-sm font-medium text-ink sm:block">Aryan Ganeshkar</span>
         </div>
       </div>
     </header>

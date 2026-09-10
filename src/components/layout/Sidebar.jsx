@@ -57,7 +57,7 @@ export default function Sidebar({ mobileOpen, onClose }) {
         </div>
         <div className="border-t border-line p-4">
           <div className="rounded-lg bg-canvas px-3 py-2.5 text-xs text-ink-soft">
-            Support Dashboard <br /> v1.0
+            Support Dashboard
           </div>
         </div>
       </aside>
