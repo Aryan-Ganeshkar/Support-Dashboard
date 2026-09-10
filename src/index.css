@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #14162b;
+  --color-ink-soft: #5c5f78;
+  --color-ink-faint: #9395ab;
+  --color-paper: #ffffff;
+  --color-canvas: #f7f7fb;
+  --color-canvas-deep: #eeeef6;
+  --color-line: #e6e6f0;
+  --color-line-soft: #eeeef5;
+
+  /* Primary brand accent — indigo/violet */
+  --color-brand: #4f46e5;
+  --color-brand-dark: #4338ca;
+  --color-brand-soft: #eef0fd;
+
+  /* Semantic: resolved / success */
+  --color-success: #0e9f6e;
+  --color-success-dark: #057a55;
+  --color-success-soft: #e2f8ef;
+
+  --color-amber: #d97706;
+  --color-amber-soft: #fef3e2;
+
+  --color-coral: #dc2626;
+  --color-coral-soft: #fde8e8;
+
+  --color-slate: #64748b;
+  --color-slate-soft: #eef1f5;
+
+  --color-blue: #2563eb;
+  --color-blue-soft: #eaf1ff;
+
+  --shadow-panel: 0 1px 2px rgba(20, 22, 43, 0.04), 0 1px 0 rgba(20, 22, 43, 0.03);
+  --shadow-float: 0 16px 36px -12px rgba(79, 70, 229, 0.18), 0 2px 8px -2px rgba(20, 22, 43, 0.08);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink-faint);
+}
+
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, var(--color-line-soft) 25%, var(--color-canvas-deep) 37%, var(--color-line-soft) 63%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+@keyframes drawer-in {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+@keyframes drawer-in-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+.drawer-in-right {
+  animation: drawer-in-right 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.drawer-in {
+  animation: drawer-in 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fade-in {
+  animation: fade-in 0.2s ease;
+}
